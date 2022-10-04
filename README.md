@@ -12,3 +12,6 @@ Maling-IT App | Aplikasi eBook gratis buat kalian semua.
 - Di Website Kodular Pilih Import
 
 ## Silahkan Mencoba :D
+
+Via Release [Download](https://github.com/rasitech-sudo/Maling-IT-App/releases/)
+Via Telegram [Download](https://t.me/RasiTechChannel1/118)
