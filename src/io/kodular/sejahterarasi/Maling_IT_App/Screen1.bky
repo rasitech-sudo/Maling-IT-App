@@ -1,0 +1,764 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="[:Fi^@=26+;rW)(=1-I," x="-3030" y="-410">
+    <mutation component_type="TextBox" is_generic="false" instance_name="Text_Box1" event_name="GotFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">Text_Box1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="#f6x#A4Pm|AEH6;0W0Ha">
+        <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Label4"></mutation>
+        <field name="COMPONENT_SELECTOR">Label4</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="BU$}o23?Lz|WeV+4jBFx">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="a+HF)_|^H4=?#9xO.=uO">
+            <mutation component_type="SpaceView" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Space3"></mutation>
+            <field name="COMPONENT_SELECTOR">Space3</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="Oj2APX4@G_!D`xHX_*rE">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="$CCHlg[.HNe3xoa{}UY)">
+                <mutation component_type="MakeroidCardView" set_or_get="set" property_name="Width" is_generic="false" instance_name="Card_View3"></mutation>
+                <field name="COMPONENT_SELECTOR">Card_View3</field>
+                <field name="PROP">Width</field>
+                <value name="VALUE">
+                  <block type="math_number" id="-W*[GXdg~cW]ujO*1$qy">
+                    <field name="NUM">-2</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="b_~AUp24TY[*ABS5.D|5" x="-2110" y="-390">
+    <mutation component_type="Web" is_generic="false" instance_name="Web1" event_name="GotText"></mutation>
+    <field name="COMPONENT_SELECTOR">Web1</field>
+    <statement name="DO">
+      <block type="component_method" id=";()g-|RN|-H:fR[L6061">
+        <mutation component_type="JSONTools" method_name="ParseJSON" is_generic="false" instance_name="JSONTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">JSONTools1</field>
+        <value name="ARG0">
+          <block type="lexical_variable_get" id="?(=@fKUh2k_=I^}FnsmN">
+            <mutation>
+              <eventparam name="responseContent"></eventparam>
+            </mutation>
+            <field name="VAR">responseContent</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="{BVA)D9h(+G)v.G~zn:n">
+            <mutation component_type="JSONTools" method_name="OpenJSONArray" is_generic="false" instance_name="JSONTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">JSONTools1</field>
+            <value name="ARG0">
+              <block type="text" id="M[GB+h/BY+y]qj7I$_qy">
+                <field name="TEXT">data</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="L*.muHSBmtd0FL@I:HNS">
+                <mutation component_type="MakeroidListViewImageText" method_name="ClearList" is_generic="false" instance_name="List_View_Image_and_Text1"></mutation>
+                <field name="COMPONENT_SELECTOR">List_View_Image_and_Text1</field>
+                <next>
+                  <block type="controls_forRange" id="vh3TeMLZUVCKPCv4,iD1">
+                    <field name="VAR">number</field>
+                    <value name="START">
+                      <block type="math_number" id="xQ@aXIGGb$ckH.)e@MEO">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="END">
+                      <block type="component_method" id="l4xgP*=PF{)eQN.t,uSV">
+                        <mutation component_type="JSONTools" method_name="GetCurrentArrayLength" is_generic="false" instance_name="JSONTools1"></mutation>
+                        <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                      </block>
+                    </value>
+                    <value name="STEP">
+                      <block type="math_number" id="s1,:aCgY?*dd|FC:Upj-">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="component_method" id="sBa+L9[k/!fd1[TDNB;@">
+                        <mutation component_type="MakeroidListViewImageText" method_name="AddItem" is_generic="false" instance_name="List_View_Image_and_Text1"></mutation>
+                        <field name="COMPONENT_SELECTOR">List_View_Image_and_Text1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="19ULW*HVCVAS2G1HV4^M">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="7I7UnGb2?F+Qg,aF8fov">
+                                <field name="TEXT">https://drive.google.com/thumbnail?authuser=0&amp;sz=w320&amp;id=</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="component_method" id="f/nQ16=d9ZAi}sKTW_=p">
+                                <mutation component_type="JSONTools" method_name="GetStringInArray" is_generic="false" instance_name="JSONTools1"></mutation>
+                                <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="]]-^p{#`/_;%O!/!QkGx">
+                                    <field name="TEXT">gd_id</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="lexical_variable_get" id="||uO*nVfq9.7v=J#yO`=">
+                                    <field name="VAR">number</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="component_method" id="jN4Y(H3:gjx~,vq+u)Ob">
+                            <mutation component_type="JSONTools" method_name="GetStringInArray" is_generic="false" instance_name="JSONTools1"></mutation>
+                            <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                            <value name="ARG0">
+                              <block type="text" id="p9`pR)k-r~Mr][du;rh0">
+                                <field name="TEXT">name</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="lexical_variable_get" id="763H;]HQnl%ahDw|[9{{">
+                                <field name="VAR">number</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text_join" id="17Gg!lVm?61vnuN)ih8d">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="math_round" id="L![hW/h-VWQrG8n:-%:}">
+                                <field name="OP">ROUND</field>
+                                <value name="NUM">
+                                  <block type="component_method" id="Ss]$~(?3Ooc@!IPyeF#F">
+                                    <mutation component_type="JSONTools" method_name="GetStringInArray" is_generic="false" instance_name="JSONTools1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="dG;WqIT5Bb/[0A=ml1Af">
+                                        <field name="TEXT">size</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="lexical_variable_get" id="8wvz!CaVZQ2Ez}O{E[{G">
+                                        <field name="VAR">number</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text" id="~H9)k-Q56]Ev-~@Kt%dK">
+                                <field name="TEXT"> Byte</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="component_method" id="?2x/RrdX%Y!pC)cm=`.*">
+                        <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Snackbar1</field>
+                        <value name="ARG0">
+                          <block type="text" id="ItPaj;e$rPa8a.`]$D/4">
+                            <field name="TEXT">List Loaded!</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="QsD#wK6xKcSQzKq4hYvs">
+                            <mutation component_type="MakeroidSnackbar" method_name="Dismiss" is_generic="false" instance_name="Snackbar2"></mutation>
+                            <field name="COMPONENT_SELECTOR">Snackbar2</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="D)-?tUz=`*:Vm=wUFL0*" x="-1390" y="-390">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="^oj{K{=3SuhM4Y,_0{Mw">
+        <mutation component_type="Web" set_or_get="set" property_name="Url" is_generic="false" instance_name="Web1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web1</field>
+        <field name="PROP">Url</field>
+        <value name="VALUE">
+          <block type="component_method" id=",ruO{l8B`ZgSybVdTwgz">
+            <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+            <field name="COMPONENT_SELECTOR">Cryptography1</field>
+            <value name="ARG0">
+              <block type="component_method" id="$2.F+uLJ/rAQ*Y4as.%6">
+                <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                <field name="COMPONENT_SELECTOR">Cryptography1</field>
+                <value name="ARG0">
+                  <block type="text" id="z)+*NZMxr72+,3pho`s+">
+                    <field name="TEXT">YUhSMGNITTZMeTloY0drdWVuaGpaVE11Ym1WMEwyRndhUzV3YUhBL2JHbHRhWFE5TWpBPQ==</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="GmvGYGR0#3GKXdI`?wf2">
+            <mutation component_type="Web" method_name="Get" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+            <next>
+              <block type="component_method" id="_/IbNvy;pbVk+pitNl2k">
+                <mutation component_type="MakeroidBottomSheet" method_name="RegisterLayoutAsDialog" is_generic="false" instance_name="Bottom_Sheet1"></mutation>
+                <field name="COMPONENT_SELECTOR">Bottom_Sheet1</field>
+                <value name="ARG0">
+                  <block type="component_component_block" id="!BNT/SOby1mK_lL2iwGH">
+                    <mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="V/o#CQXuXniNlF0-pOa0">
+                    <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Snackbar2</field>
+                    <value name="ARG0">
+                      <block type="text" id="j=1^k6~:;m.{9/EjF{@p">
+                        <field name="TEXT">Loading List!</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="E#F9YaO}w_|-{Z}Rm~8h">
+                        <mutation component_type="MakeroidSpotlight" set_or_get="set" property_name="Component" is_generic="false" instance_name="Spotlight1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Spotlight1</field>
+                        <field name="PROP">Component</field>
+                        <value name="VALUE">
+                          <block type="component_component_block" id="xc.[^fzv6zHxhVxtckB0">
+                            <mutation component_type="Label" instance_name="Label4"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label4</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id=",9*vzhqcwzO~KIfkycvV">
+                            <mutation component_type="MakeroidSpotlight" method_name="ShowSpotlight" is_generic="false" instance_name="Spotlight1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Spotlight1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="~gVIpjKcPIf`nJ)l~@l(" x="-510" y="-390">
+    <mutation component_type="MakeroidCardView" is_generic="false" instance_name="Card_View4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Card_View4</field>
+    <statement name="DO">
+      <block type="component_method" id="AY`(2S]g-?c!nr=m;vZ7">
+        <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="Web_Viewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+        <value name="ARG0">
+          <block type="text_join" id="-^a-jF4Bk5Dc(IXt40XY">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="text" id="diz?MqGtUV@ist2n[Y5b">
+                <field name="TEXT">https://docs.google.com/file/d/</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="bd,LWj-bLOB:^BIF~*a{">
+                <mutation component_type="JSONTools" method_name="GetStringInArray" is_generic="false" instance_name="JSONTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                <value name="ARG0">
+                  <block type="text" id="~okW=|J,O:ddL=Ib:i_R">
+                    <field name="TEXT">gd_id</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lexical_variable_get" id="{D*S+R$!7h9gjb|#+t7s">
+                    <field name="VAR">global id</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="YV0fU2;)h(Jw/VO*)jg-">
+                <field name="TEXT">/view</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="^|X(V3vd{vFu;;SAdK!}">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="view"></mutation>
+            <field name="COMPONENT_SELECTOR">view</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="y}7G.M!3M.0Z`YAulrkc">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="kfoxk9{XD5XUM)[dRJqS">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Vertical_Arrangement2"></mutation>
+                <field name="COMPONENT_SELECTOR">Vertical_Arrangement2</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="_!m%Dv4d-3ED*drkvwZx">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="ml)iaUyay~:_[d5du(Z=">
+                    <mutation component_type="MakeroidBottomSheet" method_name="HideDialog" is_generic="false" instance_name="Bottom_Sheet1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Bottom_Sheet1</field>
+                    <next>
+                      <block type="component_method" id="6jew:m%g,jp,D:{oU`t]">
+                        <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar2"></mutation>
+                        <field name="COMPONENT_SELECTOR">Snackbar2</field>
+                        <value name="ARG0">
+                          <block type="text" id="wA$s]_[pfl|?2e)H=3.V">
+                            <field name="TEXT">Loading Preview!</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id=",{vT~ZXdtuwqc0{0=X2P" x="-3090" y="-250">
+    <mutation component_type="TextBox" is_generic="false" instance_name="Text_Box1" event_name="LostFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">Text_Box1</field>
+    <statement name="DO">
+      <block type="component_set_get" id=":q4jYxpH7c}Co*)[DNae">
+        <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Label4"></mutation>
+        <field name="COMPONENT_SELECTOR">Label4</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id=".o.TUJX@Rjd_@|2LhpYb">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="T-OB?iTri#C09cu#l:YV">
+            <mutation component_type="SpaceView" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Space3"></mutation>
+            <field name="COMPONENT_SELECTOR">Space3</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="d1$;$NFGHtwU_A?2w9:N">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="fdf2$YDHog_6gmk])Ffp">
+                <mutation component_type="MakeroidCardView" set_or_get="set" property_name="WidthPercent" is_generic="false" instance_name="Card_View3"></mutation>
+                <field name="COMPONENT_SELECTOR">Card_View3</field>
+                <field name="PROP">WidthPercent</field>
+                <value name="VALUE">
+                  <block type="math_number" id="`kkH/w0B1(kO5d[%9S}|">
+                    <field name="NUM">46</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="wdz%;BZ;S!,X35oUxYk{" x="290" y="-390">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer1" event_name="WebViewStringChange"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+    <statement name="DO">
+      <block type="component_method" id="O;7[*UvX)x/HKb!M6=_X">
+        <mutation component_type="WebViewer" method_name="EvaluateJS" is_generic="false" instance_name="Web_Viewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+        <value name="ARG0">
+          <block type="text" id="%Q`%rAE#{}.a0kDy1B5H">
+            <field name="TEXT">document.querySelector("body &gt; div.ndfHFb-c4YZDc.ndfHFb-c4YZDc-AHmuwe-Hr88gd-OWB6Me.ndfHFb-c4YZDc-N4imRe.ndfHFb-c4YZDc-vyDMJf-aZ2wEe.ndfHFb-c4YZDc-i5oIFb.ndfHFb-c4YZDc-TSZdd &gt; div.ndfHFb-c4YZDc-Wrql6b.ndfHFb-c4YZDc-N4imRe-NMrWyd-RCfa3e").remove();</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="u,7_t:d3@!]hM,qN~rns" x="1130" y="-390">
+    <mutation component_type="MakeroidCardView" is_generic="false" instance_name="Card_View1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Card_View1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="g8N-yb*ECFZQ~kZ{7PRb">
+        <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+        <field name="PROP">DataUri</field>
+        <value name="VALUE">
+          <block type="text" id="C(2nUYR7{^m?4O0Twm2L">
+            <field name="TEXT">https://t.me/malingIT</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="|0C$Q9Uyx2`@i.:h3}lq">
+            <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+            <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="9FbknL=MWv;Moa9w_83)" x="-3130" y="-110">
+    <mutation component_type="TextBox" is_generic="false" instance_name="Text_Box1" event_name="OnTextChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">Text_Box1</field>
+    <statement name="DO">
+      <block type="controls_if" id=",S]H54Fz~F]Xq9)q9yI#">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_negate" id="iMYed.Cs!qN2{s[|@,#U">
+            <value name="BOOL">
+              <block type="text_isEmpty" id="qi`fm1LX#B3PG].@@G3Y">
+                <value name="VALUE">
+                  <block type="component_set_get" id="#3Pw_qat8wp4+fBfv1a:">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="Fzd#JW0pgUdoDdRm-vfZ">
+            <mutation component_type="Web" set_or_get="set" property_name="Url" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+            <field name="PROP">Url</field>
+            <value name="VALUE">
+              <block type="text_join" id="o@gA`UM4ysF#!0|W:k)s">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="component_method" id="BQN47)|`]e%Fms/g%4/5">
+                    <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Cryptography1</field>
+                    <value name="ARG0">
+                      <block type="component_method" id=".VgNzIq`lL#qzL!:4GW_">
+                        <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Cryptography1</field>
+                        <value name="ARG0">
+                          <block type="text" id="X7wg/3eGU~+:JPY9IDfY">
+                            <field name="TEXT">YUhSMGNITTZMeTloY0drdWVuaGpaVE11Ym1WMEwyRndhUzV3YUhBL2JHbHRhWFE5TVRBd01DWnpaV0Z5WTJoZmJtRnRaVDA9</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="component_set_get" id="IeZ%4r1!g_?mXR3c||6=">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="jMJ0!]qz9^/y{EaZn)gd">
+                <mutation component_type="Web" method_name="Get" is_generic="false" instance_name="Web1"></mutation>
+                <field name="COMPONENT_SELECTOR">Web1</field>
+                <next>
+                  <block type="component_method" id="VRSq^Yr=wOk%5WhoV.B)">
+                    <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Snackbar2</field>
+                    <value name="ARG0">
+                      <block type="text" id="53u/h#uCO)$x?*!pbzI/">
+                        <field name="TEXT">Loading List!</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_set_get" id="CKFyu,[C3h%PilKw^PW4">
+            <mutation component_type="Web" set_or_get="set" property_name="Url" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+            <field name="PROP">Url</field>
+            <value name="VALUE">
+              <block type="component_method" id="misTQu/yKT+`;#d`8Uj^">
+                <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                <field name="COMPONENT_SELECTOR">Cryptography1</field>
+                <value name="ARG0">
+                  <block type="component_method" id="NTS-Xq~?$$59Z%*)k3K4">
+                    <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Cryptography1</field>
+                    <value name="ARG0">
+                      <block type="text" id="3k,{$UYq)H.M#_{`s@Q0">
+                        <field name="TEXT">YUhSMGNITTZMeTloY0drdWVuaGpaVE11Ym1WMEwyRndhUzV3YUhBL2JHbHRhWFE5TWpBPQ==</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="gR2qOw)QAU21,M8aRR3(">
+                <mutation component_type="Web" method_name="Get" is_generic="false" instance_name="Web1"></mutation>
+                <field name="COMPONENT_SELECTOR">Web1</field>
+                <next>
+                  <block type="component_method" id="xp5rVwEnY_X}C]NgQ88(">
+                    <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Snackbar2</field>
+                    <value name="ARG0">
+                      <block type="text" id="k+9bA4QZHq4i5|HqQ+,.">
+                        <field name="TEXT">Loading List!</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="34#eTBEQmAc[[pIf55C]" x="290" y="-250">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="ge4cc8+6Ll+J1*[[}@{1">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="QeVW[-|Vx}m_/H(g#,2/">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="50boNj+]Yt$x}lFj#t|r">
+                <mutation component_type="VerticalArrangement" set_or_get="get" property_name="Visible" is_generic="false" instance_name="view"></mutation>
+                <field name="COMPONENT_SELECTOR">view</field>
+                <field name="PROP">Visible</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="+$eu`)Uu$FpU;iTig|0}">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="}eCgE^tX#k()b6t7X6T)">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="view"></mutation>
+            <field name="COMPONENT_SELECTOR">view</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="f]aZMfxpLkJ1Nq,T5YS=">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="J8#f7E]-)#9a(O|bfOKZ">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Vertical_Arrangement2"></mutation>
+                <field name="COMPONENT_SELECTOR">Vertical_Arrangement2</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="q(HK?psGQxV.W3ccT)J-">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_closeApplication" id="l5_v{PeI/UrpUa{AwBL0"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="K7(mSSHxOJQY#:};`L72" x="1130" y="-270">
+    <mutation component_type="MakeroidCardView" is_generic="false" instance_name="Card_View2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Card_View2</field>
+    <statement name="DO">
+      <block type="component_set_get" id="c*Im,23=N4w}jJ!!cP:A">
+        <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+        <field name="PROP">DataUri</field>
+        <value name="VALUE">
+          <block type="text" id="T@@)~iL[nK-EFv?Wm8.q">
+            <field name="TEXT">https://t.me/RasiTechChannel1</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="v+sdxi-KB-)NLF0Tl!(u">
+            <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+            <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="#M=1.e1*%weTa{Qc/_L/" x="-1110" y="-30">
+    <mutation component_type="MakeroidListViewImageText" is_generic="false" instance_name="List_View_Image_and_Text1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">List_View_Image_and_Text1</field>
+    <statement name="DO">
+      <block type="component_method" id="P%pCk%w2G6Barh-w]@(J">
+        <mutation component_type="MakeroidBottomSheet" method_name="ShowDialog" is_generic="false" instance_name="Bottom_Sheet1"></mutation>
+        <field name="COMPONENT_SELECTOR">Bottom_Sheet1</field>
+        <next>
+          <block type="lexical_variable_set" id="FAH^3C]m@-O2GsRxuD6i">
+            <field name="VAR">global id</field>
+            <value name="VALUE">
+              <block type="math_add" id="RIHxUES2dB8eTos?HxPT">
+                <mutation items="2"></mutation>
+                <value name="NUM0">
+                  <block type="lexical_variable_get" id="qL:4Uy{L(]8Pm41-{W1[">
+                    <mutation>
+                      <eventparam name="position"></eventparam>
+                    </mutation>
+                    <field name="VAR">position</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="math_number" id="yz3C667_:`l{jhC8[x5L">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="n8}b7suu/iU!3Jbz;+=c" x="-510" y="-50">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer1" event_name="PageLoaded"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+    <statement name="DO">
+      <block type="component_method" id="y2Z3ibV9MT/M1-r.?q!T">
+        <mutation component_type="MakeroidSnackbar" method_name="Dismiss" is_generic="false" instance_name="Snackbar2"></mutation>
+        <field name="COMPONENT_SELECTOR">Snackbar2</field>
+        <next>
+          <block type="component_method" id="$6Ph#3o{^xV/z-KE~Dxi">
+            <mutation component_type="WebViewer" method_name="EvaluateJS" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <value name="ARG0">
+              <block type="text" id="p8%]}X*_P|5?-Q[@5-r`">
+                <field name="TEXT">document.querySelector("body &gt; div.ndfHFb-c4YZDc.ndfHFb-c4YZDc-AHmuwe-Hr88gd-OWB6Me.ndfHFb-c4YZDc-N4imRe.ndfHFb-c4YZDc-vyDMJf-aZ2wEe.ndfHFb-c4YZDc-i5oIFb.ndfHFb-c4YZDc-TSZdd &gt; div.ndfHFb-c4YZDc-Wrql6b.ndfHFb-c4YZDc-N4imRe-NMrWyd-RCfa3e").remove();</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Hk_}*G:PFt4#s1--5QXs" x="290" y="-50">
+    <mutation component_type="MakeroidCardView" is_generic="false" instance_name="Card_View5" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Card_View5</field>
+    <statement name="DO">
+      <block type="component_set_get" id="u:B]nH2Ag(_*a_?QSnEZ">
+        <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="Activity_Starter1"></mutation>
+        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+        <field name="PROP">DataUri</field>
+        <value name="VALUE">
+          <block type="text_join" id="}GZuh5zpD[kGPO]~96/^">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="eHMVfvq[c[zM?-%PE:GN">
+                <field name="TEXT">https://drive.google.com/uc?export=download&amp;id=</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="3_rgV:^,H3r@l[I6{!Y]">
+                <mutation component_type="JSONTools" method_name="GetStringInArray" is_generic="false" instance_name="JSONTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">JSONTools1</field>
+                <value name="ARG0">
+                  <block type="text" id="wL@308gl]-Pnn1F$Bl0I">
+                    <field name="TEXT">gd_id</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lexical_variable_get" id=")n}mj-!m*+P=u#IGK[Y{">
+                    <field name="VAR">global id</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="0JaR$Qt4~TqKd0ZP%*[,">
+            <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+            <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+            <next>
+              <block type="component_method" id="=:n:GH85$,u/1/m#Fkk.">
+                <mutation component_type="MakeroidBottomSheet" method_name="HideDialog" is_generic="false" instance_name="Bottom_Sheet1"></mutation>
+                <field name="COMPONENT_SELECTOR">Bottom_Sheet1</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="J{7K/hleuz#rC6YM..fc" x="-1110" y="130">
+    <field name="NAME">id</field>
+    <value name="VALUE">
+      <block type="math_number" id="y7v|xQcV:RGr39ZAn4bc">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="]rbkWW1_u;/z`J-?MyhK" x="-510" y="110">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer1" event_name="ProgressChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+    <statement name="DO">
+      <block type="component_method" id="O5{,KBoEQ2XL5Drt8Es)">
+        <mutation component_type="WebViewer" method_name="EvaluateJS" is_generic="false" instance_name="Web_Viewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+        <value name="ARG0">
+          <block type="text" id="%0SrqHu1xNYa3%BWiT-F">
+            <field name="TEXT">document.querySelector("body &gt; div.ndfHFb-c4YZDc.ndfHFb-c4YZDc-AHmuwe-Hr88gd-OWB6Me.ndfHFb-c4YZDc-N4imRe.ndfHFb-c4YZDc-vyDMJf-aZ2wEe.ndfHFb-c4YZDc-i5oIFb.ndfHFb-c4YZDc-TSZdd &gt; div.ndfHFb-c4YZDc-Wrql6b.ndfHFb-c4YZDc-N4imRe-NMrWyd-RCfa3e").remove();</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="tTx@(W:s%pv4N)UbFXJt" x="290" y="170">
+    <mutation component_type="Label" is_generic="false" instance_name="Label4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Label4</field>
+    <statement name="DO">
+      <block type="component_method" id="AH.|Xm$w%g@2FV(4=qMa">
+        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="@DI?CNN!+*PT@`nz}[r-">
+            <field name="TEXT">Created With ❤️ By Rasi Tech</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>

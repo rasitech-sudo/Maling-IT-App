@@ -1,0 +1,92 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2019-10-17T16:51:54+0200",
+ "nonVisible": "true",
+ "iconName": "https://ide.kodular.io/assets/logo.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "Initialize",
+   "description": "Initialize Webviewer",
+   "params": [{
+    "name": "webviewer",
+    "type": "component"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "ViewerDocExcelViaOneDrive",
+   "description": "Via OneDrive",
+   "params": [
+    {
+     "name": "cid",
+     "type": "text"
+    },
+    {
+     "name": "resid",
+     "type": "text"
+    },
+    {
+     "name": "authkey",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "ViewerDocFileViaGoogleIdFile",
+   "description": "Via Google, Only files under 25 MB can be previewed\n Google Drive viewer helps you preview over 16 different file types",
+   "params": [{
+    "name": "id",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "ViewerDocFileViaGoogleUrl",
+   "description": "Via Google,Only files under 25 MB can be previewed\n Google Drive viewer helps you preview over 16 different file types",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "ViewerDocPowerpointViaOneDrive",
+   "description": "Via OneDrive",
+   "params": [
+    {
+     "name": "cid",
+     "type": "text"
+    },
+    {
+     "name": "resid",
+     "type": "text"
+    },
+    {
+     "name": "authkey",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "ViewerOfficeFileViaOfficeApps",
+   "description": "Via OfficeApps,View file .ppt .pptx .doc .docx .xls .xlsx",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  }
+ ],
+ "blockProperties": [],
+ "helpUrl": "",
+ "type": "io.makeroid.project1kangris2018.DocViewer.DocViewer",
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "DocViewer",
+ "helpString": "DocViewer Online by kangris<br>Extension made with Kodular IDE",
+ "properties": [],
+ "events": []
+}]

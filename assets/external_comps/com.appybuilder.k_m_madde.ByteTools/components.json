@@ -1,0 +1,117 @@
+[{
+ "categoryString": "EXTENSION",
+ "nonVisible": "true",
+ "iconName": "https://community.kodular.io/user_avatar/community.kodular.io/the_k_studio/32/77457_2.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "BToKb",
+   "description": "Convert Bytes (B) to Kilobytes (Kb)",
+   "params": [{
+    "name": "b",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "GbToMb",
+   "description": "Convert Gigabytes (Gb) to Megabytes (Mb)",
+   "params": [{
+    "name": "gb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "GbToTb",
+   "description": "Convert Gigabytes (Gb) to Terabytes (Tb)",
+   "params": [{
+    "name": "gb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "KbToB",
+   "description": "Convert Kilobytes (Kb) to Bytes (B)",
+   "params": [{
+    "name": "kb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "KbToMb",
+   "description": "Convert Kilobytes (Kb) to Megabytes (Mb)",
+   "params": [{
+    "name": "kb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "MbToGb",
+   "description": "Convert Megabytes (Mb) to Gigabytes (Gb)",
+   "params": [{
+    "name": "mb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "MbToKb",
+   "description": "Convert Megabytes (Mb) to Kilobytes (Kb)",
+   "params": [{
+    "name": "mb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "PbToTb",
+   "description": "Convert Petabytes (Pb) Terabytesytes (Tb)",
+   "params": [{
+    "name": "pb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "TbToGb",
+   "description": "Convert Terabytes (Tb) to Gigabytes (Gb)",
+   "params": [{
+    "name": "tb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "TbToPb",
+   "description": "Convert Terabytesytes (Tb) to Petabytes (Pb)",
+   "params": [{
+    "name": "tb",
+    "type": "number"
+   }],
+   "returnType": "number"
+  }
+ ],
+ "blockProperties": [],
+ "helpUrl": "",
+ "type": "com.appybuilder.k_m_madde.ByteTools.ByteTools",
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "ByteTools",
+ "helpString": "This is Simple ByteTools Extension developed by The K Studio to convert Bytes into Kilobytes, Megabytes, Gigabytes & Terabytes.",
+ "properties": [],
+ "events": []
+}]

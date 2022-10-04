@@ -1,0 +1,198 @@
+[{
+ "methods": [
+  {
+   "deprecated": "false",
+   "description": "Retrieves the int value for the given attribute for the first occurance in the current JSON Object or Array. If the current JSON type is Array the index defaults to 1(The first item in the array) If you need to get the value from other indexes use the method \"GetStringInArray\".",
+   "name": "GetBooleanValue",
+   "params": [{
+    "name": "attributeName",
+    "type": "text"
+   }],
+   "returnType": "boolean"
+  },
+  {
+   "deprecated": "false",
+   "description": "Returns the length of the current JSON Array, if the JSON type is Object, this method returns -1.",
+   "name": "GetCurrentArrayLength",
+   "params": [],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "description": "Retrieves the value for the given attribute for the given index in the JSON array. To bring this inline with App Inventor conventions, the index starts at 1.",
+   "name": "GetIntInArray",
+   "params": [{
+    "name": "index",
+    "type": "number"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "description": "Retrieves the int value for the given attribute for the first occurance in the current JSON Object or Array. If the current JSON type is Array the index defaults to 1(The first item in the array) If you need to get the value from other indexes use the method \"GetStringInArray\".",
+   "name": "GetIntValue",
+   "params": [{
+    "name": "attributeName",
+    "type": "text"
+   }],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "description": "Retrieves the value for the given attribute for the given index in the JSON array. To bring this inline with App Inventor conventions, the index starts at 1.",
+   "name": "GetStringInArray",
+   "params": [
+    {
+     "name": "JSONArrayAttribute",
+     "type": "text"
+    },
+    {
+     "name": "index",
+     "type": "number"
+    }
+   ],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Retrieves the value at the given index in the current JSON array. This method is for use when the elements in the array dont have a name to reference. To bring this inline with App Inventor conventions, the index starts at 1.",
+   "name": "GetStringInArrayByIndex",
+   "params": [{
+    "name": "index",
+    "type": "number"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Returns the value for the given attribute, in the given sub array, without resetting the current location.",
+   "name": "GetStringInSubJSONArray",
+   "params": [
+    {
+     "name": "index",
+     "type": "number"
+    },
+    {
+     "name": "JSONArrayName",
+     "type": "text"
+    },
+    {
+     "name": "attributeName",
+     "type": "text"
+    }
+   ],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Returns the value for the given attribute, in the given sub array or sub object without resetting the current location, for JSON objects, if the current location is inside an object then index does nothing.",
+   "name": "GetStringInSubJSONObject",
+   "params": [
+    {
+     "name": "index",
+     "type": "number"
+    },
+    {
+     "name": "JSONObjectName",
+     "type": "text"
+    },
+    {
+     "name": "attributeName",
+     "type": "text"
+    }
+   ],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Retrieves the String value for the given attribute for the first occurance in the current JSON Object or Array. If the current JSON type is Array the index defaults to 1(The first item in the array) If you need to get the value from other indexes use the method \"GetStringInArray\".",
+   "name": "GetStringValue",
+   "params": [{
+    "name": "attributeName",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Use this method to open a JSON Array denoted by square brackets. This opens a JSON Array from the parsed JSON String. To open an Array inside of the current Array or Object use the \"OpenSubJSONArray\" block.",
+   "name": "OpenJSONArray",
+   "params": [{
+    "name": "JSONArrayName",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "description": "Use this method to open a JSON Object denoted by curly braces. This opens a JSON Object from the parsed JSON String. To open an Object inside of the current Array or Object use the \"OpenSubJSONObject\" block.",
+   "name": "OpenJSONObject",
+   "params": [{
+    "name": "JSONObjectName",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "description": "This method can be used in cases where the JSON Object does not have a name to reference it, you can use the index parameter to specify at which index in the array the desired object is. You can then use the regular methods to get the attributes inside the object. JSON Arrays cannot be placed inside objects without a name and as such there is no method for getting an array by index.",
+   "name": "OpenObjectInArrayByIndex",
+   "params": [{
+    "name": "index",
+    "type": "number"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "description": "Opens a sub array inside the current JSON array or Object. If the current object is a JSON array it will open the sub array at the specified index. If the current object is a JSON Object then the index does nothing. NOTE: If you use this method inside a for loop note that it will affect the method \"GetCurrentArrayLength\", be sure to set the array back to the desired array using the block \"OpenJSONArray\".",
+   "name": "OpenSubJSONArray",
+   "params": [
+    {
+     "name": "JSONArrayName",
+     "type": "text"
+    },
+    {
+     "name": "index",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "description": "Opens a JSON Object inside of the current JSON Array or Object. If current position is ROOT use OpenJSONObject instead.",
+   "name": "OpenSubJSONObject",
+   "params": [{
+    "name": "JSONObjectName",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "description": "Parse JSON takes a String and internally creates a JSON Object or Array. ParseJSON also internally establishes this Array or Object as the root.",
+   "name": "ParseJSON",
+   "params": [{
+    "name": "JSONString",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "description": "Internally sets the current position to the \"root\" JSON, in other words the JSON Array or Object that was originally parsed.",
+   "name": "SetCurrentPositionToRoot",
+   "params": []
+  }
+ ],
+ "dateBuilt": "2019-04-11T21:09:23-0700",
+ "nonVisible": "true",
+ "events": [],
+ "external": "true",
+ "helpString": "A collection of methods for reading JSON Arrays and JSON Objects with methods to Parse JSON and easily read JSON files. Developed by Luke Gackle.",
+ "androidMinSdk": 7,
+ "properties": [],
+ "type": "com.LukeGackle.JSONTools",
+ "showOnPalette": "true",
+ "version": "4",
+ "name": "JSONTools",
+ "helpUrl": "",
+ "blockProperties": [],
+ "iconName": "https://1.bp.blogspot.com/-d-xyqbKFyAY/WSDvpMEG-tI/AAAAAAABYTk/I9gjYEgABZYxjwi2pzmlqbvQg6eMJhSeQCLcB/s1600/ExtensionsIcons.png",
+ "categoryString": "EXTENSION"
+}]
