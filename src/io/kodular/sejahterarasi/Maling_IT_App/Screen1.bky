@@ -200,15 +200,15 @@
         <field name="COMPONENT_SELECTOR">Web1</field>
         <field name="PROP">Url</field>
         <value name="VALUE">
-          <block type="component_method" id=",ruO{l8B`ZgSybVdTwgz">
-            <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+          <block type="component_method" id="P1HHSRzzj}4-+OmSf#,w">
+            <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
             <field name="COMPONENT_SELECTOR">Cryptography1</field>
             <value name="ARG0">
-              <block type="component_method" id="$2.F+uLJ/rAQ*Y4as.%6">
-                <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+              <block type="component_method" id="Z[b]i7z)Y4j*=mPH*s+V">
+                <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
                 <field name="COMPONENT_SELECTOR">Cryptography1</field>
                 <value name="ARG0">
-                  <block type="text" id="z)+*NZMxr72+,3pho`s+">
+                  <block type="text" id="/h+-=Ct9U.)9|*Y=3;S(">
                     <field name="TEXT">YUhSMGNITTZMeTloY0drdWVuaGpaVE11Ym1WMEwyRndhUzV3YUhBL2JHbHRhWFE5TWpBPQ==</field>
                   </block>
                 </value>
@@ -506,12 +506,12 @@
             <field name="COMPONENT_SELECTOR">Web1</field>
             <field name="PROP">Url</field>
             <value name="VALUE">
-              <block type="component_method" id="misTQu/yKT+`;#d`8Uj^">
-                <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+              <block type="component_method" id="RWL![pU$J%(xB;R=|e/T">
+                <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
                 <field name="COMPONENT_SELECTOR">Cryptography1</field>
                 <value name="ARG0">
-                  <block type="component_method" id="NTS-Xq~?$$59Z%*)k3K4">
-                    <mutation component_type="KodularEncrypt" method_name="AES256Decode" is_generic="false" instance_name="Cryptography1"></mutation>
+                  <block type="component_method" id="+53D*gX*DKL9ysOA0JU-">
+                    <mutation component_type="KodularEncrypt" method_name="Base64Decode" is_generic="false" instance_name="Cryptography1"></mutation>
                     <field name="COMPONENT_SELECTOR">Cryptography1</field>
                     <value name="ARG0">
                       <block type="text" id="3k,{$UYq)H.M#_{`s@Q0">
